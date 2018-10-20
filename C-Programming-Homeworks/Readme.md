@@ -26,7 +26,7 @@ Part 1:
 Part 2:
 - C program for “Evaluating the vertical distance of the bouncing ball”.
 # HW4
-Encryption and Decryption. See the [pdf file.](https://github.com/aliyasineser/C-Programming-Homeworks/blob/master/HW04/hw04.pdf)
+Encryption and Decryption. See the [pdf file.](HW04/hw04.pdf)
 # HW5
 Part 1:
 - Implementation of a car crash simulator program. There will be two cars. You will get car names as character, car speeds as double, and car weights as integer from console.
@@ -55,7 +55,7 @@ Your program will include at least two functions as following :
 ways.
 # HW8
 Part 2:
-- C program to handle the appointments of a doctor. [Check the pdf](https://github.com/aliyasineser/C-Programming-Homeworks/blob/master/HW08/HW08.pdf) for further information.
+- C program to handle the appointments of a doctor. [Check the pdf](HW08/HW08.pdf) for further information.
 # HW9
 Part 1:
 - University worker implementation. Structs are used.
