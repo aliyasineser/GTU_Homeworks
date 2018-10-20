@@ -1,0 +1,48 @@
+Final Rapor
+###########
+
+Programin genel isleyisi:
+Server program bulundugu bilgisayarin ip adresinden bir port aciyor. Bir soket acip portu actiktan sonra bir dongu
+icinde client bekliyor. Bir client geldigi takdirde fork ile bir cocuk olusturarak iletisim araci olan file descriptor'u
+kapatiyor ki sadece cocuk client ile iletisim kursun. Cocuklarin id'leri bir array icinde tutuluyor ve surekli olarak bir
+dosya icinde update ediliyor. Shared memory'nin kontrolunu saglayamayacagimi dusundugumden boyle bir yol izledim. 
+Mini server cocukla iletisime gecerken input aliyor ve gerekli cevabi file halinde gonderiyor. Asagida belirtecegim linkten
+edindigim program uzerinde yaptigim cokca degisiklikle elde ettigim programda uzerinde degisiklik yaptigim dosya gonderme ve 
+dosya alma fonksiyonlari bulunmakta. Bu sebepten dolayi gerekli hata duzeltmelerini yaptiktan ve kendime uyarladiktan sonra
+islerimi kullanirken mesaj gonderme yerine dosya gonderme yolunu izledim. Reply dosya icinde ve isi kolaylastiriyor. 
+Mini-server surekli olarak input alip cevap yollayarak bir calisma izliyor. Client tarafinda ise basitce, soket acip ip:port'a
+baglanma islemi ve bir menu var. Menu basilip gerekli istege gore server ile haberlesme yapiliyor. Bu sekilde bir iletisim soz
+konusu. Yardim aldigim sitenin linki:
+https://lms.ksu.edu.sa/bbcswebdav/users/mdahshan/Courses/CEN463/Course-Notes/07-file_transfer_ex.pdf
+
+
+Kullanim
+########
+Client icin kullanim -> ./client <IP ADRES> <PORT>
+Server icin kullanim -> ./fileShareServer <PORT>
+Usage yazildi, programi argumansiz calistirarak usage gorebilmeniz mumkundur. Usage screenshot klasor icindedir.
+
+Kod kisminda, client'in her bir operasyonunu bir fonksiyon halinde yazarak belirttim. Aciklamalari pdf'te verilenler ile ayni 
+oldugundan tekrarini yazmadim. Server tarafinda fonksiyonlara bolme gibi islemler yapmadan bir adet genel fonksiyon yazarak 
+(childCommunication fonksiyonu) programi bitirdim. send_file, recv_file, get_file_name gibi fonksiyonlar referansini verdigim
+siteden geliyorlar, sistemin genel yapisi da buradan ilham alinarak yapildi. Fakat ustunde editlemeler ve hata duzeltmeleri 
+yapildi. Referans verip koduna hakim oldugum ve Erkan hoca ile iletisim kurdugumda aldigim cevaba uygun olarak kullandim.
+Ayni zamanda ogrenim gordugumuz kitabin (System Programming, Robbins) restart kutuphanesini kullanmaktayim.
+ 
+
+Hatalar
+#######
+Duzeltilmemis hatalar mevcut, zaman yetmediginden dolayi eksik biraktim. Client-client arasinda dosya transferi yok, ama client'tan
+server'a dosya aktarimi mumkun. Dosya aktarirken sorunla karsilasmadim, resim ve video gibi kaynaklari atip testini yaptim. 
+Birden fazla client baglaniyor, bir problem gormedim. İletisim bazli sorunlardan kaynakli bazi durumlarda (client-client arasinda dosya
+tasimaya calismak veya server'a var olmayan bir dosya atmaya calismak gibi) iki taraftan biri takilabiliyor. Gordugum hatalar var , Ctrl+c
+sinyali gelince procmask kullanarak islem bitmeden kapanmasini engelledim. Sadece SIGINT handle edildi. Ayni klasorde server ve client acarsaniz
+yanlis sonuclar verebilir. dosya gonderirken ayni isimde dosya varsa o klasordeki dosyanin ismi degistiriliyor. İsminin basina o anki degistirme 
+tarihi ekleniyor ki en eski olan belli olsun. Bazi durumlarda da (unhandled signal vb.) port acik kaliyor, baska portlari deneyip tekrar programi
+kullanmak mumkun. Rastladigim baska hatalar yok, tum hatalari bulup yazmaya ugrastim. 
+
+
+
+############################################
+Final Rapor Sonu: 141044058 - Ali Yasin Eser
+############################################

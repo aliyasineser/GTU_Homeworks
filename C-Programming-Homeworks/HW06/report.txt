@@ -1,0 +1,29 @@
+
+Report:
+
+	 Monday Tuesday Wednesday Thursday Friday Saturday Sunday
+
+Ali	   50	   70	   30	   60	   80	   30	   50
+
+Ayse	   60	   50	   40	   70	   50	   40	   80
+
+Fatma	   70	   40	   70	   50	   40	   50	   60
+
+Mehmet	   80	   30	   100	   40	   5	   60	   70
+
+The best employer of Monday: Mehmet
+
+The best employer of Tuesday: Ali
+
+The best employer of Wednesday: Mehmet
+
+The best employer of Thursday: Ayse
+
+The best employer of Friday: Ali
+
+The best employer of Saturday: Mehmet
+
+The best employer of Sunday: Ayse
+
+The best employer of week is Ayse ... Congratulations Ayse
+

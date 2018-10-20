@@ -1,0 +1,51 @@
+Decoder V-5.0.19 Build 10203, Jul 23 2010
+Options: -NoSym -Proc=HC12 -T
+Decoding File: 'C:\Users\bilmuhlab\Documents\Project\bin\Project.abs.s19'
+File format: S-Record
+
+S0370000433A5C55736572735C62696C6D75686C61625C446F63756D656E74735C50726F6A6563745C62696E5C50726F6A6563742E61627364
+Type:     S0 (Header Block)
+Length:   0x37
+Address:  0x0000
+Text:     C:\Users\bilmuhlab\Documents\Project\bin\Project.abs
+CheckSum: 0x64
+
+S11D150086FF5A025A037A026A86FEB40268864A5A005A018B017A12003F2B
+Type:     S1 (A record containing the 2-bytes address at which the code/data is to reside)
+Length:   0x1D
+Address:  0x1500
+Data:     0x1500   86 FF 5A 02 5A 03 7A 02  - ??Z?Z?z?
+          0x1508   6A 86 FE B4 02 68 86 4A  - j????h?J
+          0x1510   5A 00 5A 01 8B 01 7A 12  - Z?Z???z?
+          0x1518   00 3F                    - ??
+CheckSum: 0x2B
+
+S105FFFE1500E8
+Type:     S1 (A record containing the 2-bytes address at which the code/data is to reside)
+Length:   0x5
+Address:  0xFFFE
+Data:     0xFFFE   15 00                    - ??
+CheckSum: 0xE8
+
+S9030000FC
+Type:     S9 (Termination record for a block of S1 records)
+Length:   0x3
+Address:  0x0000
+CheckSum: 0xFC
+
+Disassembly: 
+
+00001500 86FF         [1]    LDAA  #255
+00001502 5A02         [2]    STAA  $02
+00001504 5A03         [2]    STAA  $03
+00001506 7A026A       [3]    STAA  $026A
+00001509 86FE         [1]    LDAA  #254
+0000150B B40268       [3]    ANDA  $0268
+0000150E 864A         [1]    LDAA  #74
+00001510 5A00         [2]    STAA  $00
+00001512 5A01         [2]    STAA  $01
+00001514 8B01         [1]    ADDA  #1
+00001516 7A1200       [3]    STAA  $1200
+00001519 3F           [9]    SWI   
+
+0000FFFE 1500         [4]    JSR   0,X

@@ -1,0 +1,34 @@
+Midterm Rapor
+#############
+
+Programin genel isleyisi:
+
+Server program ortak fifoya sahip. Client program ortak fifo uzerinden(onceden tanimli) erisim yaparak id veriyor. 
+Karsiliginda server id aliyor ve fork ile cocuk olusturuyor. Cocuk olusturmali cunku parent client beklerken baglanan client hizmet almali.
+Maksimum client'a gelindiginde parent bir cocugu bekliyor, bu sirada baglanmak isteyen tum client'lari bekletiyor. Bir anda maksimum client'tan fazla
+client baglarsaniz goruntu guzel durmayabilir. Client baglandiktan sonra bilgilerini fork ile acilan cocuga(mini server) aktarmali. Bu sirada ortak fifo kullanilirsa 
+karisiklik cikabileceginden ozel iki fifo daha olusturuluyor(okuma ve yazma). Fifo isimleri mini server id'si ile belirleniyor. Hem client hem de mini server
+birbirlerinin id'lerinden haberdarlar. Veriyi client'tan aldiktan sonra mini server her time interval surede(arguman olarak aliniyor) integral hesaplayarak  client'a 
+gonderiyor(fifoya yaziyor). Client'ta da sonsuz bir okuma dongusu mevcut. Her time interval surede integral sonucunu alip kendi olusturdugu log dosyasina ekliyor. 
+Durdurma sartlari sinyal. Her sinyal icin  bir tepki mevcut degil, sadece SIGINT, SIGQUIT ve SIGTERM icin yazabildim. Log dosyalarina gerekli eklemeler, integral
+sonuclari ve cikis sebebi yazilip birakiliyor. Bir client durdurulursa hepsi duruyor, bu hatayi duzeltecek vaktim yoktu. Ayni zamanda nadir de olsa bazi calistirmalarda 
+bir cift(okuma ve yazma)  fifosu birakabiliyor(unlink problem gibi bir durum olusuyor, konuya hakim olsam da problemi cozecek zamanim yoktu). Bunlar disinda gozlemledigim
+bir hata yok, integral sonuclarindan o kadar emin degilim. Integral hesaplamak icin simpson kurali kullandim. Sonuclarin kesinliginden emin olmasam da implement ve gerekli
+kaynaklarin kullanimi dogrultusunda bir sorun olmadigini soyleyebilirim. Integral hesabinda fonksiyon sonucunu almak icin asagidaki kutuphane gerekiyor:
+
+Libmatheval kutuphanesi, GNU tarafindan yazilmis bir kutuphane. 3 degiskene kadar fonksiyon hesaplama yapabiliyor. Standart adi altinda gecmediginden kurmak gerekiyor. 
+Kurulum isleminin terminal kodlari:
+sudo apt-get update
+sudo apt-get install libmatheval-dev
+
+Kurulum kaynak linki:
+https://www.howtoinstall.co/en/ubuntu/precise/libmatheval-dev
+Kutuphane linki:
+https://www.gnu.org/software/libmatheval/
+
+Kutuphaneyi kurduktan sonra Makefile bulundugu icin terminalden make yazarak kolayca compile edebilirsiniz. Ardindan server icin IntegralGen, client icin Client calistirilmali.
+Kullanim sirasinda her argumanin basinda tire isareti bulunmali. 
+
+Not: Client tarafinda CTRL + C kullanarak kapatirsaniz bir cift fifonun silinmeme ihtimali yuksek. Ama server tarafinda CTRL + C kullandiginiz zaman kesin o fifo yok olacaktir. Client 
+tarafindaki zaman probleminden dolayi cozemedim. 
+Zaman yetersizliginden magic number fazla gozukebilir, olabildigince duzeltmeye etmeye calistim. 

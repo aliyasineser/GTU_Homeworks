@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Directory.h</itemPath>
+      <itemPath>Exception.h</itemPath>
+      <itemPath>Executable.h</itemPath>
+      <itemPath>File.h</itemPath>
+      <itemPath>TextFile.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>Directory.cpp</itemPath>
+      <itemPath>Exception.cpp</itemPath>
+      <itemPath>Executable.cpp</itemPath>
+      <itemPath>File.cpp</itemPath>
+      <itemPath>HW8_141044058_AliYasin_Eser.cpp</itemPath>
+      <itemPath>TextFile.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+      </compileType>
+      <item path="Directory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Directory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Exception.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Exception.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Executable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Executable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="File.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="File.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="HW8_141044058_AliYasin_Eser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TextFile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TextFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Directory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Directory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Exception.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Exception.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Executable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Executable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="File.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="File.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="HW8_141044058_AliYasin_Eser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TextFile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TextFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

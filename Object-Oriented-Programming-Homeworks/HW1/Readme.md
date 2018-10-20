@@ -1,0 +1,1 @@
+Reversi implementation in C++

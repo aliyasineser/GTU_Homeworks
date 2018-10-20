@@ -1,0 +1,28 @@
+ Odevde verildigi uzere:
+ Node
+ Server
+ Router
+ implement edilmistir. Server en merkezde, router ise server-node 
+ iliskisini kuracak sekilde baglanmistir.  Node-Router baglama sekli
+ arraydeki eleman sayilarinin modu alinarak olusturulmustur. Boylece:
+ destination%n == router indexi
+ olacak sekilde mesaj router'a gelmekte, ardindan destination/n formulu 
+ ile de hangi kapiya ulasilacagi belirlenmektedir. Server kendine mesaj 
+ gonderemez, node'lar ise random olarak gelen sayi kendi indexine
+ esit olmadigi surece random almaya devam ederler. Random konusunda:
+ intuniform fonksiyonu kullanildigindan dolayi randomlar saglikli gelmemektedir. 
+ Alternatif bir random konuldugu takdirde sorunsuz calisir ki zaten asil 
+ onemli olan iletisimin nasil kuruldugudur. 
+ Tek ned dosyasi, 3 adet cc dosyasi ve bir mesaj class'i mevcut. Mesaji parse 
+ etmek yerine, daha mantikli olarak mesaj paketinin icinde source, destination
+ ve message count eklendi. Message count istenildigi takdirde global olarak 
+ tanimlanabilir ama globalin saglikli oldugunu dusunmuyorum. Ki gercek bir 
+ networkde ne kadar counter kullanildigini bilmedigimden cok da ustune basilacak
+ bir konu olarak gormuyorum. Bu sebeple asil onemli olan iletisim kismi uzerinde 
+ durmus bulundum. Odevin testi degisik parametreler ile denendi, zaten istenilen
+ parametre (simulasyon calistirildiginda cikan box icinde secenek belirtilecek)
+ verildigi surece sorun cikmayacaktir. Ornek ciktilar rapor ile ayni klasor icinde.
+ Saygilarimla
+ 
+		Ali Yasin Eser
+		141044058

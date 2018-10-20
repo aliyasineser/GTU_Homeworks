@@ -1,0 +1,3 @@
+package hwconnection;
+
+@license(LGPL);

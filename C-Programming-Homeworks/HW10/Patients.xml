@@ -1,0 +1,24 @@
+<Records>
+	<Patient>
+		<ID>20</ID>
+		<Name>Tutor Yasin</Name>
+		<History>On 10 12 2012 applied with an headache, diagnosed with flue,
+			purposed to use Majezik and rest. On 12 8 2014 applied with headache.
+			Nothing done.</History>
+	</Patient>
+	<Patient>
+		<ID>23</ID>
+		<Name>Fatma Zeki</Name>
+		<History></History>
+	</Patient>
+	<Patient>
+		<ID>7</ID>
+		<Name>Tutor Doga</Name>
+		<History>Asiri oyun oynamaktan dolayi rahatsizlandi.</History>
+	</Patient>
+	<Patient>
+		<ID>9</ID>
+		<Name>Tutor Hasan</Name>
+		<History>Asiri kod yazmaktan dolayi rahatsizlandi.</History>
+	</Patient>
+</Records>
