@@ -1,6 +1,6 @@
 # GTU_Homeworks
 2014-2018 Gebze Technical University Computer Science Homeworks. 
-Notes are not added, most of them were 100/100 and grades were in most of them. Courses are:
+Notes are not added, most of them were 100/100. Courses are:
 
 * [Introduction to Programming(C)](C-Programming-Homeworks/)
 
